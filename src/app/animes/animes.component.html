@@ -1,0 +1,10 @@
+<h2>Anime list</h2>
+<ul>
+    <li *ngFor="let anime of animes" 
+        (click)="onSelect(anime)" 
+        [class.selected]="anime === selectedAnime">
+        <span>{{anime.name}}</span>
+    </li>
+</ul>
+
+<app-anime-detail [anime]="selectedAnime"></app-anime-detail>
